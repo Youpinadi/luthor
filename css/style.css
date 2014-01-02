@@ -1,0 +1,99 @@
+body
+{
+	font-family: Helvetica;
+	background-color: #262626;
+	color: #FFF;
+}
+
+*, *:before, *:after
+{
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+
+.clear_right
+{
+    display:block;
+    clear: both;
+}
+.token
+{
+	font-family: Courier;
+	background-color: #CCC;
+	padding: 6px;
+	border-radius: 3px;
+	float: left;
+	height: 46px;
+	font-size: 12px;
+	margin: 3px 3px;
+}
+.token_class
+{
+	font-size: 10px;
+}
+.lexeme
+{
+	float: left;
+	white-space: pre;
+	margin-top: 3px;
+	padding: 2px 4px;
+	border-radius: 2px;
+	background-color: rgba(0,0,0,0.3);
+}
+
+.token.mini *
+{
+	width: 12px;
+}
+
+.token.mini *
+{
+	display: none;
+}
+
+.identifier
+{
+	background-color: #649E4C;
+	color: #fff;
+}
+
+.operator
+{
+	background-color: #BF6E3C;
+}
+
+.assignment
+{
+	background-color: #0399CD;
+}
+
+.integer
+{
+	background-color: #9D3B00;
+	color: #FFF;
+}
+
+.string
+{
+	background-color:  #5A0522;
+	color: #FFF;
+}
+
+.whitespace
+{
+	opacity: 0.8;
+	background-color: #555;
+	color: #FFF;
+}
+
+.semicolumn
+{
+	background-color: #97B3D8;
+}
+
+.comparison
+{
+	background-color: #0E5074;
+	color: #FFF;
+}
+

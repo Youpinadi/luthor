@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<link rel="stylesheet" type="text/css" href="http://dailymotion.com/css/gen/pack/switch-ltr.css">
+ 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+ 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+ 	<script src="js/lexer.js"></script>
+ 	<script src="js/main.js"></script>
+ 	<title>Luthor</title>
+ </head>
+<body ng-app  ng-controller="MainCtrl">
+ 	<div class="container">
+		<h1 class="mrg-btm-lg">Luthor</h1>
+	 	<textarea rows="10" cols="100" ng-model="input" ng-change="findTokens()" class="font-md pdg-md"></textarea>
+	 	<label class="row mrg-top-md mrg-btm-md">Minimize whitespaces
+	 		<input type="checkbox" ng-model="mini_whitespaces"/>
+	 	</label>
+	 	<span class="token {{ token.tokenClass }}" ng-class='{clear_right: tokens[$index - 1].lexeme.indexOf("\n") != -1, mini: token.tokenClass == "whitespace" && mini_whitespaces}' ng-repeat="token in tokens track by $index">
+	 		<div class="token_class">{{ token.tokenClass }}</div>
+	 		<div class="lexeme">{{ displayWhitespaces(token.lexeme) }}</div>
+	 	</span>
+ 	</div>
+ </body>
+ </html>
+
+
